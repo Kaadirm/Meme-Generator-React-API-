@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: "Karla", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(228, 226, 226, 0.994);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 1.5rem;
+  gap: 1rem;
+}
+
+.header {
+  width: 100vw;
+  height: 65px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+.logo {
+  display: flex;
+  align-items: inherit;
+  height: 100%;
+}
+
+.trollImg {
+  height: 100%;
+  margin-right: 6px;
+}
+
+.header-title {
+  font-size: 1.25rem;
+}
+
+.header-project {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.main-frame {
+  width: 30vw;
+}
+
+.form {
+  width: 30vw;
+  gap: 1rem;
+  padding: 1rem 0.25rem 0.25rem 0.25rem;
+  display: grid;
+  grid-template: 35px 35px / 1fr 1fr;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.meme-btn {
+  grid-column: 1 / span 2;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: currentColor;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-input {
+  font-family: inherit;
+  border-radius: 5px;
+  border: solid 1px #D5D4D8;
+  text-indent: 5px;
+}
+
+.img-div {
+  width: 100%;
+  padding: 1rem 0.25rem 0 0.25rem;
+}
+
+.meme-img {
+  width: 100%;
+  max-width: 100%;
 }
