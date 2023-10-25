@@ -57,6 +57,7 @@ body {
 
 .main-frame {
   width: 30vw;
+  min-width: 334px;
 }
 
 .form {
@@ -87,9 +88,30 @@ body {
 .img-div {
   width: 100%;
   padding: 1rem 0.25rem 0 0.25rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .meme-img {
   width: 100%;
   max-width: 100%;
+}
+
+.meme-text-top {
+  position: absolute;
+  top: 1rem;
+  color: white;
+  font-weight: 900;
+  text-shadow: 4px 4px #000000;
+  text-transform: uppercase;
+}
+
+.meme-text-bottom {
+  position: absolute;
+  bottom: 1rem;
+  color: white;
+  font-weight: 900;
+  text-shadow: 4px 4px #000000;
+  text-transform: uppercase;
 }
