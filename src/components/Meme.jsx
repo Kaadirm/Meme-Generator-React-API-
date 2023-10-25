@@ -1,17 +1,22 @@
-import React, {useState} from 'react'
-import {memes} from './memesdata'
+import React, {useEffect, useState} from 'react'
 
 function Meme() {
   const [meme, setMeme] = useState({
     topText: "",
     bottomText: "",
-    randomImage: "http://i.imgflip.com/1bij.jpg"
+    randomImage: ""
   });
-  const [memeData, setMemeData] = useState(memes)
+  const [memeData, setMemeData] = useState()
+
+  useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+    .then(res => res.json())
+    .then(data => setMemeData(data.data.memes))
+  }, [])
+
   const getMemeImage = () => {
-    const memesArr = memeData.data.memes
-    const randomNumber = Math.floor(Math.random() * memesArr.length)
-    const url = memesArr[randomNumber].url
+    const randomNumber = Math.floor(Math.random() * memeData.length)
+    const url = memeData[randomNumber].url
     setMeme(preVal => ({
       ...preVal,
       randomImage: url
@@ -24,18 +29,16 @@ function Meme() {
       [name]: value
     }))
   }
-  console.log(meme)
-
   return (
     <>
         <main className='main-frame'>
             <div className='form'>
                 <input type='text' className='form-input' name='topText' placeholder='Top text' value={meme.topText} onChange={handleChange} />
                 <input type='text' className='form-input' name='bottomText' placeholder='Bottom text' value={meme.bottomText} onChange={handleChange} />
-                <button onClick={getMemeImage} className='meme-btn'>Get a new meme image  🖼</button>
+                <button onClick={getMemeImage} className='meme-btn'>{meme.randomImage ? "Get a new meme image 🖼" : "Get a meme 🖼"}</button>
             </div>
             <div className='img-div'>
-                  <img src={meme.randomImage} className='meme-img'/>
+                  <img alt={meme.randomImage ? "meme" : ""} src={meme.randomImage} className='meme-img'/>
                   <h2 className="meme-text-top">{meme.topText}</h2>
                   <h2 className="meme-text-bottom">{meme.bottomText}</h2>
             </div>  
