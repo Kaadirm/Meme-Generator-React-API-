@@ -56,12 +56,12 @@ body {
 }
 
 .main-frame {
-  width: 40vw;
-  min-width: 334px;
+  width: 50vw;
 }
 
+
 .form {
-  width: 40vw;
+  width: 50vw;
   gap: 1rem;
   padding: 1rem 0.25rem 0.25rem 0.25rem;
   display: grid;
@@ -71,6 +71,7 @@ body {
 
 .meme-btn {
   grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
   color: currentColor;
   font-family: inherit;
@@ -124,4 +125,37 @@ body {
   .form {
     width: 80vw;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 10;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+
+  .header-project {
+    font-size: 0.6rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-input {
+    width: 100%;
+    height: 1.75rem;
+    font-size: 0.80rem;
+  }
+
+  .meme-btn {
+    width: 100%;
+    height: 1.75rem;
+    font-size: 0.75rem;
+  }
+
 }
