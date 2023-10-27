@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/denemefile/static/css/main.56045d68.css",
-    "main.js": "/denemefile/static/js/main.76000902.js",
-    "index.html": "/denemefile/index.html",
-    "main.56045d68.css.map": "/denemefile/static/css/main.56045d68.css.map",
-    "main.76000902.js.map": "/denemefile/static/js/main.76000902.js.map"
+    "main.css": "/Meme-Generator-React-API-/static/css/main.56045d68.css",
+    "main.js": "/Meme-Generator-React-API-/static/js/main.76000902.js",
+    "index.html": "/Meme-Generator-React-API-/index.html",
+    "main.56045d68.css.map": "/Meme-Generator-React-API-/static/css/main.56045d68.css.map",
+    "main.76000902.js.map": "/Meme-Generator-React-API-/static/js/main.76000902.js.map"
   },
   "entrypoints": [
     "static/css/main.56045d68.css",
