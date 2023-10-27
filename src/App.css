@@ -56,12 +56,12 @@ body {
 }
 
 .main-frame {
-  width: 30vw;
+  width: 40vw;
   min-width: 334px;
 }
 
 .form {
-  width: 30vw;
+  width: 40vw;
   gap: 1rem;
   padding: 1rem 0.25rem 0.25rem 0.25rem;
   display: grid;
@@ -114,4 +114,14 @@ body {
   font-weight: 900;
   text-shadow: 4px 4px #000000;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-frame {
+    width: 80vw;
+  }
+
+  .form {
+    width: 80vw;
+  }
 }
