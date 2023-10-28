@@ -4,7 +4,7 @@ This is a Meme Generator application built using React that allows users to crea
 
 ## Live Demo
 
-You can access the live version of this application [here](https://kaadirm.github.io/Meme-Generator-React-API/).
+You can access the live version of this application [here](https://kaadirm.github.io/Meme-Generator-React-API-/).
 
 for Larger Screens
 
