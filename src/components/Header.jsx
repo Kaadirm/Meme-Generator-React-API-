@@ -1,6 +1,9 @@
 import React from 'react'
 
 function Header() {
+
+  // Header part only for appearance
+
   return (
     <>
         <header className="header">
