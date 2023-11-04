@@ -8,11 +8,12 @@ You can access the live version of this application [here](https://kaadirm.githu
 
 for Larger Screens
 
-![LargeScreen2](https://github.com/Kaadirm/Meme-Generator-React-API-/assets/141996672/b8f5adfb-1ab8-40e7-bcf0-6a8486da7ab9)
+![LargerScreenMeme](https://github.com/Kaadirm/Meme-Generator-React-API-/assets/141996672/2e6fcdbb-3a0c-447a-adf2-4236f41bc125)
 
 for Mobile
 
-![MobileScreen](https://github.com/Kaadirm/Meme-Generator-React-API-/assets/141996672/c72a2ee4-6022-420c-a883-665440f7e64d)
+![MobileScreenMeme](https://github.com/Kaadirm/Meme-Generator-React-API-/assets/141996672/d0050e85-ead2-40b0-8c54-c4acab1d90e0)
+
 
 ## Features
 
