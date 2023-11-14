@@ -9,7 +9,9 @@ function Meme() {
   const [meme, setMeme] = useState({
     topText: "",
     bottomText: "",
-    randomImage: ""
+    randomImage: "",
+    topTextLength: "100%",
+    bottomTextLength: "100%"
   });
   const [memeData, setMemeData] = useState()
 
@@ -37,10 +39,14 @@ function Meme() {
   //Input events tracking live for topText and bottomText
 
   const handleChange = (e) => {
-    const {name, value } = e.target
+    const {name, value, type } = e.target
+    let numberValue    
+    if(type === "number"){
+      value < 10 ? numberValue = 10 : value > 100 ? numberValue = 100 : numberValue = value
+    }
     setMeme(preVal => ({
       ...preVal,
-      [name]: value
+      [name]: type === "number" ? numberValue : value
     }))
   }
 
@@ -60,6 +66,7 @@ function Meme() {
       return preVal === 6 ? 1 : preVal + 1 
     })
   } 
+  console.log(meme.topTextLength)
 
 
   // Using useRef and html2canvas to download image and texts together by clicking download button
@@ -198,9 +205,37 @@ function Meme() {
     <>
         <main className='main-frame' onMouseMove={handleMouseMove}>
             <div className='form'>
-                <input type='text' className='form-input' name='topText' placeholder='Top text' value={meme.topText} onChange={handleChange} />
+              <div className='form-input-div'>
+                <input type='text' 
+                className='form-input' 
+                name='topText' 
+                placeholder='Top text' 
+                value={meme.topText} 
+                onChange={handleChange} />
+                
+                <input type="number"  
+                className="form-length" 
+                name='topTextLength' 
+                placeholder={100}    
+                onChange={handleChange} />
+
+              </div >
                 <button style={{backgroundColor: memeColor[colorCount]}} className="color-btn" onClick={handleColorCount}>C</button>
-                <input type='text' className='form-input' name='bottomText' placeholder='Bottom text' value={meme.bottomText} onChange={handleChange} />
+              <div className='form-input-div'>
+                <input type='text' 
+                className='form-input' 
+                name='bottomText' 
+                placeholder='Bottom text' 
+                value={meme.bottomText} 
+                onChange={handleChange} />
+                
+                <input type="number" 
+                className="form-length" 
+                name='bottomTextLength'
+                placeholder={100}    
+                onChange={handleChange} />
+
+              </div>  
                 <button onClick={getMemeImage} className='meme-btn'>{meme.randomImage ? "Get a new meme image 🖼" : "Get a meme 🖼"}</button>
             </div>
             <div className='img-div' ref={exportRef}>
@@ -208,8 +243,8 @@ function Meme() {
                   <h2 className="meme-text-top"
                   style={{
                     transform: `translate(${positionTopText.x}px, ${positionTopText.y}px)`,
-                    cursor: 'grab',
-                    color: memeColor[colorCount]
+                    color: memeColor[colorCount],
+                    width: meme.topTextLength+"%"
                   }}
                   onTouchStart={handleTouchStartTopText}
                   onTouchEnd={handleEndTopText}
@@ -221,8 +256,8 @@ function Meme() {
                   <h2 className="meme-text-bottom"
                   style={{
                     transform: `translate(${positionBottomText.x}px, ${positionBottomText.y}px)`,
-                    cursor: "grab",
-                    color: memeColor[colorCount]
+                    color: memeColor[colorCount],
+                    width: meme.bottomTextLength+"%"
                   }}
                   onTouchStart={handleTouchStartBottomText}
                   onTouchEnd={handleEndBottomText}
