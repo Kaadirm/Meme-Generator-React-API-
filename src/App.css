@@ -111,6 +111,16 @@ body {
   padding: calc(0.25rem + 0.1vw) 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .form-length {
   border-radius: 5px;
   border: solid 1px #D5D4D8;
@@ -143,6 +153,7 @@ body {
   text-shadow: 2px 2px #000000;
   cursor: grab;
   overflow-wrap: break-word;
+  white-space: pre-wrap;
   width: 100%
 }
 
@@ -158,6 +169,7 @@ body {
   text-shadow: 2px 2px #000000;
   cursor: grab;
   overflow-wrap: break-word;
+  white-space: pre-wrap;
   width: 100%
 }
 

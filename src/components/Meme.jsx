@@ -40,7 +40,7 @@ function Meme() {
 
   const handleChange = (e) => {
     const {name, value, type } = e.target
-    let numberValue    
+    let numberValue  
     if(type === "number"){
       value < 10 ? numberValue = 10 : value > 100 ? numberValue = 100 : numberValue = value
     }
@@ -66,7 +66,6 @@ function Meme() {
       return preVal === 6 ? 1 : preVal + 1 
     })
   } 
-  console.log(meme.topTextLength)
 
 
   // Using useRef and html2canvas to download image and texts together by clicking download button
